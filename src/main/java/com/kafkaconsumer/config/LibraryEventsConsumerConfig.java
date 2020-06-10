@@ -25,9 +25,9 @@ public class LibraryEventsConsumerConfig {
 			ConsumerFactory<Object, Object> kafkaConsumerFactory) {
 		ConcurrentKafkaListenerContainerFactory<Object, Object> factory = new ConcurrentKafkaListenerContainerFactory<>();
 		configurer.configure(factory, kafkaConsumerFactory);
-		/* Number of Thread = Number of Partition always
+		 //Number of Thread = Number of Partition always
 		factory.setConcurrency(3);
-		*/
+		
 		factory.getContainerProperties().setAckMode(AckMode.MANUAL);
 		return factory;
 	}

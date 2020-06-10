@@ -13,7 +13,7 @@ import com.kafkaconsumer.service.LibraryEventsService;
 
 import lombok.extern.slf4j.Slf4j;
 
-@Component
+
 @Slf4j
 public class LibraryEventConsumerManualOffset implements AcknowledgingConsumerAwareMessageListener<Integer, String>{
 
